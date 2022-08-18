@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Link to css files -->
+    <link rel="stylesheet" type="text/css" href="src/styles/style.css">
+
+    <!-- Link to icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jquery minified -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <title>Notes App</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <label class="switch">
+                    <input onclick="changeThemeMode()" id="slider-mode" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+                <li><i class="fas fa-sticky-note"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="dark-mode">
+        <div id="note-list-container" class="note-list-c">
+        </div>
+        <div class="note-writing-c">
+            <form action="/saveNote" method="post" id="noteForm">
+                
+                <input type="text" name="noteId" id="noteId"  value="" onchange="checkId(this)">
+                <input type="text" name="noteTitle" id="noteTitle" maxlength="50" placeholder="Title....">
+                <input type="text" name="noteTime" id="noteTime" value="">
+                <textarea name="noteText" id="noteText" placeholder="It all starts here..." onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></textarea>
+                <button type="submit" class="btn btn-save disabled">Save</button>
+                <button type="submit" class="btn btn-delete disabled">Delete</button>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2022</p>
+
+
+
+
+    <!-- link to js files -->
+    <script src="src/scripts/script.js"></script>
+</body>
+</html>
