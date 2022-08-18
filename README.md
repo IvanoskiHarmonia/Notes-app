@@ -4,7 +4,7 @@
 - This is a basic Notes app that you can use to keep track of your notes.
 
 
-![Notes app](https://github.com/ivanoskiHarmonia/Notes-app/blob/main/app/Images/App_Photo.jpg?raw=true)
+![Notes app](https://github.com/ivanoskiHarmonia/Notes-app/blob/main/app/src/Images/App_Photo.jpg?raw=true)
 
 
 ## Table of contents
